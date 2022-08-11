@@ -29,8 +29,8 @@ function inputHandle(evt) {
 function onFormSubmit(evt) {
   evt.preventDefault();
   const { email, message } = evt.currentTarget;
-  console.log('email: ', email.value);
-  console.log('message: ', message.value);
+  const outputData = { email: email.value, message: message.value };
+  console.log(outputData);
 
   evt.currentTarget.reset();
   removeFromLoacalStorage(STORAGE_FORM_DATA);
